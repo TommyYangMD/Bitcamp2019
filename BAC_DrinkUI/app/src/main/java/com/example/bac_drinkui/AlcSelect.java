@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class AlcSelect extends AppCompatActivity {
+    //Variables to be used across other activities.
+    public static String typeOfAlc;
+    public static double sizeOfAlc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +20,28 @@ public class AlcSelect extends AppCompatActivity {
         ImageButton wineBtn = findViewById(R.id.winebtn);
         ImageButton spiritBtn = findViewById(R.id.spiritbtn);
 
+        beerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                typeOfAlc = "Beer";
+                Intent changeScreen = new Intent(AlcSelect.this, SizeSelectBeer.class);
+                startActivity(changeScreen);
+            }
+        });
+
+        wineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                typeOfAlc = "Wine";
+                Intent changeScreen = new Intent(AlcSelect.this, SizeSelectWine.class);
+                startActivity(changeScreen);
+            }
+        });
+
         spiritBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                typeOfAlc = "Hard Liquor/Spirit";
                 Intent changeScreen = new Intent(AlcSelect.this, SizeSelectSpirit.class);
                 startActivity(changeScreen);
             }

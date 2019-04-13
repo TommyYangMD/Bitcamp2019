@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight">
-        <activity android:name=".AmountSelect"></activity>
+        <activity android:name=".SizeSelectBeer"></activity>
+        <activity android:name=".SizeSelectWine" />
+        <activity android:name=".AmountSelect" />
         <activity android:name=".SizeSelectSpirit" />
         <activity android:name=".AlcSelect">
             <intent-filter>
