@@ -21,6 +21,7 @@ public class SizeSelectWine extends AppCompatActivity {
 
         Button wineGlass =  findViewById(R.id.btnWineGlass);
         otherWine = findViewById(R.id.btnotherWine);
+        otherWine.setEnabled(false);
 
         wineGlass.setOnClickListener(new View.OnClickListener() {
             @Override

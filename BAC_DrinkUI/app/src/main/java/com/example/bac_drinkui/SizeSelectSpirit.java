@@ -24,6 +24,7 @@ public class SizeSelectSpirit extends AppCompatActivity {
         Button shot =  findViewById(R.id.btnshot);
         Button doubleshot =  findViewById(R.id.btndouble);
         other =  findViewById(R.id.btnother);
+        other.setEnabled(false);
 
         shot.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -22,6 +22,7 @@ public class SizeSelectBeer extends AppCompatActivity {
         Button beerCup =  findViewById(R.id.btnCup);
         Button beerPint =  findViewById(R.id.btnPint);
         otherBeer = findViewById(R.id.btnotherBeer);
+        otherBeer.setEnabled(false);
 
         beerCup.setOnClickListener(new View.OnClickListener() {
             @Override
