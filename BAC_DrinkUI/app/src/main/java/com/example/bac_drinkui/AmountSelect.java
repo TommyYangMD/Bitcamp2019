@@ -6,12 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Button;
 
 public class AmountSelect extends AppCompatActivity {
 
     // To be used to count the amount
-    public static int counter = 0;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +19,6 @@ public class AmountSelect extends AppCompatActivity {
 
         ImageButton plus = findViewById(R.id.plusDrink);
         ImageButton minus = findViewById(R.id.minusDrink);
-        Button submit = findViewById(R.id.btnsubmit);
-
-        //Updates text view based on which kind of alcohol and size of drink you have.
-        ((TextView)findViewById(R.id.textDisplayDrink)).setText("("+ AlcSelect.typeOfAlc + ": " + AlcSelect.sizeOfAlc + " Fl Oz.)");
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
